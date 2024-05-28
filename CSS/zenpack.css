@@ -1,0 +1,121 @@
+/* Updated CSS for ZenPack */
+
+.btnc {
+    color: #d56317;
+    background-color: #343a40;
+    border-color: #d56317;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.jumbotron {
+    color: #D56317;
+    background-color: #343a40;
+    background: url("images/dark-wall-background.jpg");
+}
+
+.navbar-o {
+    background-color: #D56317;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #D56317;
+}
+
+.navbar-dark .navbar-brand {
+    color: #D56317;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+    color: #d56317;
+}
+
+.bg-dark {
+    background-color: blue;
+}
+
+h1 {
+    color: #d56317;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 700;
+    font-size: 5em;
+}
+
+.content {
+    text-align: center;
+    position: center;
+    padding-top: 25%;
+    color: #d56317;
+}
+
+body {
+    background-image: url(images/firesparks.png);
+}
+
+.texts {
+    font-family: 'Indie Flower', cursive;
+    color: #D56317;
+}
+
+html {
+    height: 100%;
+}
+
+hr {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.5)
+}
+
+.cardalign {
+    text-align: center;
+    position: center;
+    padding-top: 1%;
+    color: #d56317;
+    align-content: center;
+}
+
+.cardcontainer {
+    width: 60rem;
+    height: 20%;
+    margin-top: 2%;
+}
+
+.meal-plan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.meal-plan-card:hover {
+    transform: scale(1.05);
+}
+
+.meal-plan-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.meal-plan-info {
+    text-align: center;
+}
+
+.meal-plan-info h4 {
+    margin-top: 10px;
+}
+
+.meal-plan-info p {
+    margin: 10px 0;
+}
+
+.meal-plan-info .btn {
+    margin: 5px;
+}
