@@ -52,16 +52,40 @@
     <div class="col-lg-8 mx-auto">
       <h1>ZenPack</h1>
       <hr>
-      <form>
-        <label for="Email">Email:</label>
-        <input id="Email" type="email" placeholder="your email" name="email" required="">
-        <label for="Password">Password:</label>
-        <input id="Password" type="password" placeholder="your password" name="password" minlength="8" required="">
+      <form id="loginForm">
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="your email" name="email" required="">
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="your password" name="password" minlength="8" required="">
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
 </div>
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const response = await fetch('https://zenpack-backend.herokuapp.com/api/auth/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email, password })
+  });
+
+  const data = await response.json();
+  console.log(data);
+  if (data.token) {
+    localStorage.setItem('token', data.token);
+    alert('Login successful!');
+  } else {
+    alert('Error: ' + data.msg);
+  }
+});
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
