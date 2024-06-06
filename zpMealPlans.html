@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meal Plans</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap-4.2.1-dist/css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="zenpack.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-  
-  <!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Oswald" rel="stylesheet"> -->
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand texts" href="index.html"><i class="fas fa-utensils"></i>ZenPack</a>
+    <a class="navbar-brand texts" href="index.html"><i class="fas fa-utensils"></i> ZenPack</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,35 +41,45 @@
           <a class="nav-link texts" href="zpLogin.html">Login <i class="fas fa-user"></i></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btnc my-2 my-sm-0 texts" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col-lg-12">
-      <div class="content">
-        <h1>Meal Plans</h1>
-        <h3 class="texts">Choose Your Plan</h3>
-        <hr>
-        <div class="meal-plan-card">
-          <img src="images/weekly-plan.jpg" alt="Weekly Plan" class="meal-plan-img">
-          <div class="meal-plan-info">
-            <h4>Weekly Plan</h4>
-            <p>Enjoy a balanced weekly meal plan with breakfast, lunch, and dinner recipes.</p>
-            <button class="btn btnc" onclick="downloadPDF('weekly')"><i class="fas fa-download"></i> Download PDF</button>
-          </div>
+    <div class="col-lg-12 text-center">
+      <h1>Meal Plans</h1>
+      <h3 class="texts">Choose Your Plan</h3>
+      <hr class="underline">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="meal-plan-card">
+        <img src="images/weekly-plan.jpg" alt="Weekly Plan" class="meal-plan-img">
+        <div class="meal-plan-info">
+          <h4>Weekly Plan</h4>
+          <p>Enjoy a balanced weekly meal plan with breakfast, lunch, and dinner recipes.</p>
+          <button class="btn btnc" onclick="downloadPDF('weekly')"><i class="fas fa-download"></i> Download PDF</button>
         </div>
-        <div class="meal-plan-card">
-          <img src="images/monthly-plan.jpg" alt="Monthly Plan" class="meal-plan-img">
-          <div class="meal-plan-info">
-            <h4>Monthly Plan</h4>
-            <p>Enjoy a balanced monthly meal plan with breakfast, lunch, and dinner recipes.</p>
-            <button class="btn btnc" onclick="downloadPDF('monthly')"><i class="fas fa-download"></i> Download PDF</button>
-          </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="meal-plan-card">
+        <img src="images/monthly-plan.jpg" alt="Monthly Plan" class="meal-plan-img">
+        <div class="meal-plan-info">
+          <h4>Monthly Plan</h4>
+          <p>Enjoy a balanced monthly meal plan with breakfast, lunch, and dinner recipes.</p>
+          <button class="btn btnc" onclick="downloadPDF('monthly')"><i class="fas fa-download"></i> Download PDF</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="meal-plan-card">
+        <img src="images/custom-plan.jpg" alt="Custom Plan" class="meal-plan-img">
+        <div class="meal-plan-info">
+          <h4>Custom Plan</h4>
+          <p>Create a custom meal plan that fits your specific dietary needs and preferences.</p>
+          <button class="btn btnc" onclick="downloadPDF('custom')"><i class="fas fa-download"></i> Download PDF</button>
         </div>
       </div>
     </div>
