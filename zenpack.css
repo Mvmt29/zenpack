@@ -1,9 +1,15 @@
 /* Adjusted CSS for ZenPack */
 
-body {
-    background-color: #FFFFFF; /* White background */
-    color: #333333; /* Dark grey text */
-    padding-top: 70px;
+/* Main index page specific styles */
+.main-content {
+    text-align: center;
+    padding-top: 20%;
+    color: #d56317;
+}
+
+/* Meal plan page specific styles */
+.container.mt-5 {
+    margin-top: 5rem;
 }
 
 .navbar {
@@ -25,12 +31,12 @@ body {
     background-color: #01579B; /* Deep blue background */
 }
 
-.content h1 {
+h1 {
     color: #FF9800; /* Orange heading */
     font-family: 'Indie Flower', cursive;
 }
 
-.content h3 {
+h3 {
     color: #03A9F4; /* Light blue subheading */
     font-family: 'Indie Flower', cursive;
 }
