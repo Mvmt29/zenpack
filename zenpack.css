@@ -1,92 +1,53 @@
-/* Updated CSS for ZenPack */
-
-.btnc {
-    color: #d56317;
-    background-color: #343a40;
-    border-color: #d56317;
-}
+/* Adjusted CSS for ZenPack */
 
 body {
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Dark grey text */
     padding-top: 70px;
 }
 
+.navbar {
+    background-color: #FF9800; /* Orange navbar */
+}
+
+.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-brand {
+    color: #FFFFFF; /* White text on navbar */
+}
+
+.btnc {
+    color: #FFFFFF; /* White text on button */
+    background-color: #03A9F4; /* Light blue button */
+    border-color: #03A9F4;
+}
+
 .jumbotron {
-    color: #D56317;
-    background-color: #343a40;
-    background: url("images/dark-wall-background.jpg");
+    color: #FFFFFF; /* White text */
+    background-color: #01579B; /* Deep blue background */
 }
 
-.navbar-o {
-    background-color: #D56317;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #D56317;
-}
-
-.navbar-dark .navbar-brand {
-    color: #D56317;
-}
-
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
-    color: #d56317;
-}
-
-.bg-dark {
-    background-color: blue;
-}
-
-
-.fjalla-one-regular {
-  font-family: "Fjalla One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-<-- h1 {
-    color: #d56317;
+.content h1 {
+    color: #FF9800; /* Orange heading */
     font-family: 'Indie Flower', cursive;
-    font-weight: 700;
-    font-size: 5em;
-} -->
-
-.content {
-    text-align: center;
-    position: center;
-    padding-top: 25%;
-    color: #d56317;
 }
 
-body {
-    background-image: url(images/firesparks.png);
-}
-
-.texts {
+.content h3 {
+    color: #03A9F4; /* Light blue subheading */
     font-family: 'Indie Flower', cursive;
-    color: #D56317;
 }
 
-html {
-    height: 100%;
-}
-
-hr {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.5)
+hr.underline {
+    width: 100px;
+    border-top: 2px solid #FF9800; /* Orange underline */
+    margin: 10px auto; /* Centered underline */
 }
 
 .cardalign {
     text-align: center;
-    position: center;
-    padding-top: 1%;
-    color: #d56317;
-    align-content: center;
+    color: #FF9800; /* Orange text */
 }
 
 .cardcontainer {
     width: 60rem;
-    height: 20%;
     margin-top: 2%;
 }
 
@@ -99,6 +60,7 @@ hr {
     border: 1px solid #ddd;
     border-radius: 10px;
     transition: transform 0.3s;
+    background-color: #F5F5F5; /* Light grey background */
 }
 
 .meal-plan-card:hover {
@@ -117,12 +79,16 @@ hr {
 
 .meal-plan-info h4 {
     margin-top: 10px;
+    color: #FF9800; /* Orange heading */
 }
 
 .meal-plan-info p {
     margin: 10px 0;
+    color: #333333; /* Dark grey text */
 }
 
 .meal-plan-info .btn {
     margin: 5px;
+    color: #FFFFFF; /* White text on button */
+    background-color: #03A9F4; /* Light blue button */
 }
