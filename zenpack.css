@@ -34,9 +34,10 @@ body {
 }
 
 hr.underline {
-    width: 100px;
+    width: 400px;
     border-top: 2px solid #FF9800; /* Orange underline */
-    margin: 40px auto; /* Centered underline */
+    background: linear-gradient(to right, rgba(255, 152, 0, 0) 0%, rgba(255, 152, 0, 1) 50%, rgba(255, 152, 0, 0) 100%);
+    margin: 10px auto; /* Centered underline */
 }
 
 .cardalign {
