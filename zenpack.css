@@ -1,5 +1,3 @@
-/* Adjusted CSS for ZenPack */
-
 body {
     background-color: #FFFFFF; /* White background */
     color: #333333; /* Dark grey text */
@@ -27,12 +25,12 @@ body {
 
 .content h1 {
     color: #FF9800; /* Orange heading */
-    font-family: 'Indie Flower';
+    font-family: 'Indie Flower', cursive;
 }
 
 .content h3 {
     color: #03A9F4; /* Light blue subheading */
-    font-family: 'Indie Flower';
+    font-family: 'Indie Flower', cursive;
 }
 
 hr.underline {
