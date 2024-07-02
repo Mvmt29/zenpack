@@ -6,8 +6,8 @@ body {
     padding-top: 70px;
 }
 
-.navbar {
-    background-color: #FF9800; /* Orange navbar */
+<!--.navbar {
+    background-color: #FF9800; /* Orange navbar */-->
 }
 
 .navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-brand {
@@ -27,12 +27,12 @@ body {
 
 .content h1 {
     color: #FF9800; /* Orange heading */
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Indie Flower';
 }
 
 .content h3 {
     color: #03A9F4; /* Light blue subheading */
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Indie Flower';
 }
 
 hr.underline {
