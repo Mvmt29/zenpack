@@ -15,12 +15,17 @@
     @keyframes box-open {
       0% { transform: scale(1); }
       50% { transform: scale(1.1); }
-      100% { transform: scale(1) rotateX(90deg); }
+      100% { transform: scale(1); }
     }
 
-    @keyframes confetti-fall {
-      0% { opacity: 0; transform: translateY(0) rotate(0deg); }
-      100% { opacity: 1; transform: translateY(300px) rotate(360deg); }
+    @keyframes flap-open {
+      0% { transform: rotateX(0); }
+      100% { transform: rotateX(-180deg); }
+    }
+
+    @keyframes document-rise {
+      0% { transform: translateY(0); opacity: 0; }
+      100% { transform: translateY(-150px); opacity: 1; }
     }
 
     .animation-container {
@@ -41,34 +46,40 @@
       height: 100px;
       background: orange;
       position: relative;
-      transform-style: preserve-3d;
       animation: box-open 1s ease-in-out forwards;
-      animation-delay: 1s;
     }
 
-    .confetti {
+    .box::before, .box::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 50px;
+      background: orange;
+      top: -50px;
+      left: 0;
+      transform-origin: bottom;
+      animation: flap-open 1s ease-in-out forwards;
+    }
+
+    .box::after {
+      top: auto;
+      bottom: -50px;
+      transform-origin: top;
+    }
+
+    .document {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 10px;
-      height: 20px;
-      background: #ff9800;
-      animation: confetti-fall 2s ease-in-out forwards;
+      width: 60px;
+      height: 80px;
+      background: white;
+      border: 2px solid #333;
+      transform: translate(-50%, -50%);
+      animation: document-rise 1s ease-in-out forwards;
+      animation-delay: 1s;
+      opacity: 0;
     }
-
-    .confetti:nth-child(2n) { background: #03a9f4; }
-    .confetti:nth-child(3n) { background: #ff5722; }
-    .confetti:nth-child(4n) { background: #4caf50; }
-
-    .confetti:nth-child(1) { animation-delay: 0s; }
-    .confetti:nth-child(2) { animation-delay: 0.2s; }
-    .confetti:nth-child(3) { animation-delay: 0.4s; }
-    .confetti:nth-child(4) { animation-delay: 0.6s; }
-    .confetti:nth-child(5) { animation-delay: 0.8s; }
-    .confetti:nth-child(6) { animation-delay: 1s; }
-    .confetti:nth-child(7) { animation-delay: 1.2s; }
-    .confetti:nth-child(8) { animation-delay: 1.4s; }
-    .confetti:nth-child(9) { animation-delay: 1.6s; }
   </style>
 </head>
 <body>
@@ -149,17 +160,8 @@
   </div>
 </div>
 <div class="animation-container" id="animationContainer">
-  <div class="box">
-    <div class="confetti" style="animation-delay: 0s;"></div>
-    <div class="confetti" style="animation-delay: 0.2s;"></div>
-    <div class="confetti" style="animation-delay: 0.4s;"></div>
-    <div class="confetti" style="animation-delay: 0.6s;"></div>
-    <div class="confetti" style="animation-delay: 0.8s;"></div>
-    <div class="confetti" style="animation-delay: 1s;"></div>
-    <div class="confetti" style="animation-delay: 1.2s;"></div>
-    <div class="confetti" style="animation-delay: 1.4s;"></div>
-    <div class="confetti" style="animation-delay: 1.6s;"></div>
-  </div>
+  <div class="box"></div>
+  <div class="document"></div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
