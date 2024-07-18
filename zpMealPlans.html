@@ -58,11 +58,11 @@
   <div class="row">
     <div class="col-md-4">
       <div class="meal-plan-card">
-        <img src="images/weekly-plan.jpg" alt="Weekly Plan" class="meal-plan-img">
+        <img src="images/weekly-plan.jpg" alt="2300 Calorie Plan" class="meal-plan-img">
         <div class="meal-plan-info">
-          <h4>Weekly Plan</h4>
-          <p>Enjoy a balanced weekly meal plan with breakfast, lunch, and dinner recipes.</p>
-          <button class="btn btnc" onclick="downloadPDF('weekly')"><i class="fas fa-download"></i> Download PDF</button>
+          <h4>2300 Calorie Plan</h4>
+          <p>High Protein - High Carb - Low Fat</p>
+          <a class="btn btnc" href="meal-plans/2300CaloriePlan.pdf" download><i class="fas fa-download"></i> Download PDF</a>
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@
         <div class="meal-plan-info">
           <h4>Monthly Plan</h4>
           <p>Enjoy a balanced monthly meal plan with breakfast, lunch, and dinner recipes.</p>
-          <button class="btn btnc" onclick="downloadPDF('monthly')"><i class="fas fa-download"></i> Download PDF</button>
+          <a class="btn btnc" href="meal-plans/monthly-meal-plan.pdf" download><i class="fas fa-download"></i> Download PDF</a>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
         <div class="meal-plan-info">
           <h4>Custom Plan</h4>
           <p>Create a custom meal plan that fits your specific dietary needs and preferences.</p>
-          <button class="btn btnc" onclick="downloadPDF('custom')"><i class="fas fa-download"></i> Download PDF</button>
+          <a class="btn btnc" href="meal-plans/custom-meal-plan.pdf" download><i class="fas fa-download"></i> Download PDF</a>
         </div>
       </div>
     </div>
@@ -96,24 +96,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-<script>
-  function downloadPDF(planType) {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    doc.text(`This is the ${planType} meal plan.`, 10, 10);
-    doc.save(`${planType}-meal-plan.pdf`);
-
-    showAnimation();
-  }
-
-  function showAnimation() {
-    const animationContainer = document.getElementById('animationContainer');
-    animationContainer.style.display = 'flex';
-
-    setTimeout(() => {
-      animationContainer.style.display = 'none';
-    }, 3000);
-  }
-</script>
 </body>
 </html>
