@@ -13,6 +13,8 @@
   <style>
     .text-white { color: white; }
     .text-orange { color: orange; }
+    .bg-dark { background-color: #343a40 !important; }
+    .btnc { background-color: #03A9F4; color: white; }
   </style>
 </head>
 <body>
@@ -45,18 +47,18 @@
 </nav>
 <div class="container cardcontainer mt-5 pt-5">
   <div class="row">
-    <div class="col-lg-8 mx-auto">
+    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
       <div class="card texts bg-dark mb-3">
         <div class="card-body">
           <h3 class="card-title text-white">Contact ZenPack</h3>
-          <p class="card-text text-white">Reach out to me with any questions, comments, or concerns at one of the following.</p>
+          <p class="card-text text-white">Reach out to us with any questions, comments, or concerns at one of the following.</p>
         </div>
         <ul class="list-group list-group-flush bg-dark mb-3">
           <li class="list-group-item bg-dark text-white">IG: @Blackedoutmo</li>
-          <!-- <li class="list-group-item bg-dark text-white">Email: zenpack@gmail.com</li> -->
+          <li class="list-group-item bg-dark text-white">Email: zenpack@gmail.com</li>
         </ul>
         <div class="card-body">
-          <form action="https://formspree.io/f/xzzpzlzz" method="POST">
+          <form action="https://formspree.io/f/{your_form_id}" method="POST">
             <div class="form-group">
               <label for="email" class="text-white">Your Email:</label>
               <input type="email" class="form-control" id="email" name="email" required>
@@ -72,7 +74,7 @@
                 <option value="Feedback">Feedback</option>
                 <option value="Comments">Comments</option>
                 <option value="Site Issue">Site Issue</option>
-                <option value="Something Else">Something Else</option>
+                <option value="Anything Else">Anything Else</option>
               </select>
             </div>
             <button type="submit" class="btn btnc">Submit</button>
