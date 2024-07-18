@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
   <style>
-    .text-white {color: white;}
+    .text-white { color: white; }
+    .text-orange { color: orange; }
   </style>
 </head>
 <body>
@@ -47,25 +48,25 @@
     <div class="col-lg-8 mx-auto">
       <div class="card texts bg-dark mb-3">
         <div class="card-body">
-          <h3 class="card-title">Contact ZenPack</h3>
-          <p class="card-text">Reach out to us with any questions, comments, or concerns at one of the following.</p>
+          <h3 class="card-title text-white">Contact ZenPack</h3>
+          <p class="card-text text-white">Reach out to us with any questions, comments, or concerns at one of the following.</p>
         </div>
         <ul class="list-group list-group-flush bg-dark mb-3">
-          <li class="list-group-item bg-dark">IG: @Blackedoutmo</li>
-          <li class="list-group-item bg-dark">Email: zenpack@gmail.com</li>
+          <li class="list-group-item bg-dark text-white">IG: @Blackedoutmo</li>
+          <!-- <li class="list-group-item bg-dark text-white">Email: zenpack@gmail.com</li> -->
         </ul>
         <div class="card-body">
           <form action="https://formspree.io/f/xzzpzlzz" method="POST">
             <div class="form-group">
-              <label for="email">Your Email:</label>
+              <label for="email" class="text-white">Your Email:</label>
               <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group">
-              <label for="message">Message:</label>
+              <label for="message" class="text-white">Message:</label>
               <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
             </div>
             <div class="form-group">
-              <label for="contactType">Type of Contact:</label>
+              <label for="contactType" class="text-white">Type of Contact:</label>
               <select class="form-control" id="contactType" name="contactType" required>
                 <option value="Question">Question</option>
                 <option value="Feedback">Feedback</option>
