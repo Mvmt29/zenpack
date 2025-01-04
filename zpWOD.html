@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,28 +42,45 @@
           <a class="nav-link texts" href="zpBC.html">Buy Me a Coffee :)</a>
         </li>
       </ul>
-      <ul class="navbar-nav navbar-right">
-        <li class="nav-item">
-         <!--- <a class="nav-link texts" href="zpSignUp.html">Sign Up <i class="fas fa-user-plus"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link texts" href="zpLogin.html">Login <i class="fas fa-user"></i></a> -->
-        </li>
-      </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btnc my-2 my-sm-0 texts" type="submit">Search</button>
-      </form> -->
     </div>
   </div>
 </nav>
+
 <div class="container d-flex align-items-center justify-content-center" style="height: 80vh;">
   <div class="text-top">
     <h1>ZenPack</h1>
     <h3 class="texts">Workout of The Day</h3>
     <hr class="underline">
   </div>
+
+  <div id="workout-display">
+    <h2>HIIT Workout</h2>
+    <p id="HIIT-workout">Loading...</p>
+    
+    <h2>Bodybuilding Workout</h2>
+    <p id="BB-workout">Loading...</p>
+  </div>
 </div>
+
+<script>
+  // Heroku app URL
+  const flaskAppUrl = "https://zenpack-backend.herokuapp.com/workout_of_the_day";;
+
+  // Fetch the workout data from the Flask API
+  fetch(flaskAppUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Insert the workout data into the HTML
+      document.getElementById("HIIT-workout").innerText = data.HIIT_workout_of_the_day;
+      document.getElementById("BB-workout").innerText = data.Bodybuilding_workout_of_the_day;
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+      document.getElementById("HIIT-workout").innerText = "Error loading HIIT workout.";
+      document.getElementById("BB-workout").innerText = "Error loading bodybuilding workout.";
+    });
+</script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
