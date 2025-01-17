@@ -8,6 +8,11 @@ body {
     color: #FFFFFF; /* White text on navbar */
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+
 .btnc {
     color: #FFFFFF; /* White text on button */
     background-color: #03A9F4; /* Light blue button */
